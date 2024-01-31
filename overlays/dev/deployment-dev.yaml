@@ -4,10 +4,11 @@ metadata:
   name: web-deployment
 spec:
   replicas: 3 # Update the replica count to 3
-  #template:
-   # spec:
-      #containers:
-      #- name: nginx
+  template:
+    spec:
+      containers:
+      - name: nginx
+        image: registry.access.redhat.com/ubi8/nginx-120:1-137
         #resources:
           #limits:
             #cpu: "200" # Lower CPU limit to 200m (0.2 CPU cores)
